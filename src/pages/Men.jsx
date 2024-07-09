@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState, useEffect } from 'react';
-
+import 'animate.css'
 export default function Men() {
     const [menProd, setMenProd] = useState([]);
 
@@ -40,7 +40,7 @@ export default function Men() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', scrollBehavior: 'smooth' }}>
             {menProd.map((product, index) => (
-                <Card key={index} sx={{ maxWidth: 345, margin: "auto", display: 'grid' }}>
+                <Card key={index} sx={{ maxWidth: 345, margin: "auto", display: 'grid' }} className='animate__animated animate__backInLeft'>
                     <CardMedia
                         sx={{ height: 200 }}
                         image={product.image}
